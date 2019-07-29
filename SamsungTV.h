@@ -31,7 +31,7 @@ public:
 	void send(int cmd1, int cmd2, int cmd3, int cmd4);
 	
 private:
-    Stream *_serial;
+	Stream *_serial;
 	bool _debug;
 	int _checksum(byte cmds[]);
 };
