@@ -1,2 +1,2 @@
 # ArduinoSamsungTV
-Arduino Library for Samsung TV RS232
+Arduino Library for control Samsung TV by RS232 (Ex-Link)

@@ -100,12 +100,6 @@ void SamsungTV::send(int cmd1, int cmd2, int cmd3, int cmd4) {
 	int chksum = this->_checksum(cmds);
 	cmds[6] = chksum;
 	
-	/*if (DebugSamsungTV) {
-		char logString[20];
-		sprintf(logString, "%.2X %.2X %.2X %.2X %.2X %.2X %.2X", cmds[0], cmds[1], cmds[2], cmds[3], cmds[4], cmds[5], cmds[6]);
-		DebugSamsungTV.println(logString);
-	}*/
-	
 	this->_serial->write(cmds[0]);
 	this->_serial->write(cmds[1]);
 	this->_serial->write(cmds[2]);
