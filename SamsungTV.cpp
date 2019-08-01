@@ -77,42 +77,42 @@ void SamsungTV::source_tv() {
 }
 
 void SamsungTV::source_av(int value) {
-	if (value > 0 && value <= 3) return;
+	if (value <= 0 || value > 3) return;
 
 	value--;
 	this->execute(0x0a, 0x0, 0x1, value);
 }
 
 void SamsungTV::source_svideo(int value) {
-	if (value > 0 && value <= 3) return;
+	if (value <= 0 || value > 3) return;
 
 	value--;
 	this->execute(0x0a, 0x0, 0x2, value);
 }
 
 void SamsungTV::source_component(int value) {
-	if (value > 0 && value <= 3) return;
+	if (value <= 0 || value > 3) return;
 
 	value--;
 	this->execute(0x0a, 0x0, 0x3, value);
 }
 
 void SamsungTV::source_pc(int value) {
-	if (value > 0 && value <= 3) return;
+	if (value <= 0 || value > 3) return;
 
 	value--;
 	this->execute(0x0a, 0x0, 0x4, value);
 }
 
 void SamsungTV::source_hdmi(int value) {
-	if (value > 0 && value <= 4) return;
+	if (value <= 0 || value > 4) return;
 
 	value--;
 	this->execute(0x0a, 0x0, 0x5, value);
 }
 
 void SamsungTV::source_dvi(int value) {
-	if (value > 0 && value <= 3) return;
+	if (value <= 0 || value > 3) return;
 
 	value--;
 	this->execute(0x0a, 0x0, 0x6, value);
@@ -123,7 +123,7 @@ void SamsungTV::source_rvu() {
 }
 
 void SamsungTV::key(int value) {
-	if (value > 0 && value <= 255) return;
+	if (value < 0 || value > 255) return;
 
 	this->execute(0x0d, 0x0, 0x0, value);
 }
