@@ -60,36 +60,66 @@ public:
 	 */
 	void channel(int channel);
 	/**
+	 * Change source to a specific source (combined)
+	 *
+	 *  0 = TV
+	 * 11 = AV 1
+	 * 12 = AV 2
+	 * 13 = AV 3
+	 * 21 = S-Video 1
+	 * 22 = S-Video 2
+	 * 23 = S-Video 3
+	 * 31 = Component 1
+	 * 32 = Component 2
+	 * 33 = Component 3
+	 * 41 = PC 1
+	 * 42 = PC 2
+	 * 43 = PC 3
+	 * 51 = HDMI 1
+	 * 52 = HDMI 2
+	 * 53 = HDMI 3
+	 * 54 = HDMI 4
+	 * 61 = DVI 1
+	 * 62 = DVI 2
+	 * 63 = DVI 3
+	 * 70 = RVU
+	 *
+	 * @param  value
+	 */
+	void source(int value);
+	/**
 	 * Change source to TV
+	 * @param  value  1-3 (depend on your model)
 	 */
 	void source_tv();
 	/**
 	 * Change source to AV
-	 * @param  value  range > 1 (depend on your model)
+	 * @param  value  1-3 (depend on your model)
 	 */
 	void source_av(int value);
 	/**
 	 * Change source to S-Video
-	 * @param  value  range > 1 (depend on your model)
+	 * @param  value  1-3 (depend on your model)
 	 */
 	void source_svideo(int value);
 	/**
 	 * Change source to Component
-	 * @param  value  range > 1 (depend on your model)
+	 * @param  value  1-3 (depend on your model)
 	 */
 	void source_component(int value);
 	/**
 	 * Change source to PC (VGA)
+	 * @param  value  1-3 (depend on your model)
 	 */
-	void source_pc();
+	void source_pc(int value);
 	/**
 	 * Change source to HDMI
-	 * @param  value  range > 1 (depend on your model)
+	 * @param  value  1-4 (depend on your model)
 	 */
 	void source_hdmi(int value);
 	/**
 	 * Change source to DVI
-	 * @param  value  range > 1 (depend on your model)
+	 * @param  value  1-3 (depend on your model)
 	 */
 	void source_dvi(int value);
 	/**
@@ -106,7 +136,7 @@ public:
 	 * @param  value  Id of key (depend on you model)
 	 */
 	void key(int value);
-	void send(int cmd1, int cmd2, int cmd3, int cmd4);
+	void execute(int cmd1, int cmd2, int cmd3, int cmd4);
 	
 private:
 	/**
